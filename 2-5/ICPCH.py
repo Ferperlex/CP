@@ -10,6 +10,7 @@ import sys
 
 input = sys.stdin.readline
 
+
 ############ ---- Input Functions ---- ############
 def inp():
     return int(input())
@@ -35,7 +36,6 @@ def invr():
 # import time
 
 if __name__ == "__main__":
-
     n, c, b = inlt()
     brokens = setint()
     returned = ""

@@ -29,7 +29,9 @@ def get_digit(number, n):
     return number // 10**n % 10
 
 
-############ ---- Input Functions ---- ############
+"""############ ---- Input Functions ---- ############"""
+
+
 def inp():
     return int(input())
 

@@ -4,7 +4,7 @@
 @author: ferperlex
             _
        ----(O)
-             \.
+             \
               \_
               ( `'--.,
                `,___/
@@ -13,6 +13,9 @@
                 `|`
                  ^
 """
+
+# Windows
+
 import sys
 
 input = sys.stdin.readline
@@ -51,4 +54,15 @@ def invr():
 
 
 if __name__ == "__main__":
-    print()
+    for _ in range(inp()):
+        n = inp()
+        li = inlt()
+        inc = True
+        for i in range(1, n):
+            if li[i - 1] > li[i]:
+                inc = False
+            elif li[i] > li[i - 1] and inc is False:
+                print("NO")
+                break
+        else:
+            print("YES")

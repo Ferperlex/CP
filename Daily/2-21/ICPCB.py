@@ -13,6 +13,9 @@
                 `|`
                  ^
 """
+
+# Windows
+
 import sys
 
 input = sys.stdin.readline
@@ -51,4 +54,11 @@ def invr():
 
 
 if __name__ == "__main__":
-    print()
+    for _ in range(inp()):
+        leng = inp()
+        li = inlt()
+
+        c = li[0]
+        for n in li[1:]:
+            c = c & n
+        print(c)

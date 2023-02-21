@@ -13,6 +13,9 @@
                 `|`
                  ^
 """
+
+# Windows
+
 import sys
 
 input = sys.stdin.readline
@@ -51,4 +54,8 @@ def invr():
 
 
 if __name__ == "__main__":
-    print()
+    for _ in range(inp()):
+        n = inp()
+        nearest = 10 ** (len(str(n)) - 1)
+
+        print(n - nearest)
