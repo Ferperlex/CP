@@ -1,2 +1,2 @@
-# CP_Daily
-A collection of my responses to the Daily Zealots PSets
+# CP
+A collection of my responses to CP Problems. Will be organized by date with subfolder for the daily Zealots PSets.
