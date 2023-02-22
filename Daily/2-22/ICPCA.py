@@ -21,7 +21,7 @@ input = sys.stdin.readline
 
 
 def maxint():
-    return sys.maxsize
+    return sys.maxsize * 2 + 1
 
 
 def get_digit(number, n):
@@ -31,12 +31,6 @@ def get_digit(number, n):
 """############ ---- Input Functions ---- ############"""
 
 
-<<<<<<< HEAD
-"""############ ---- Input Functions ---- ############"""
-
-
-=======
->>>>>>> 58d4b1f (2-22 Afternoon and boilerplate change)
 def inp():
     return int(input())
 
@@ -58,4 +52,17 @@ def invr():
 
 
 if __name__ == "__main__":
-    print()
+    for _ in range(inp()):
+        li = inlt()
+
+        if (
+            li[0] == li[1] + li[2]
+            or li[1] == li[0] + li[2]
+            or li[2] == li[0] + li[1]
+            or (li[0] == li[1] and li[2] % 2 == 0)
+            or (li[0] == li[2] and li[1] % 2 == 0)
+            or (li[1] == li[2] and li[0] % 2 == 0)
+        ):
+            print("YES")
+        else:
+            print("NO")

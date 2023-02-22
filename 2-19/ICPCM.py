@@ -74,6 +74,16 @@ if __name__ == "__main__":
 
     perline = (80 + 2 * s) // (s * 5)
 
+    if (
+        li[0] == li[1] + li[2]
+        or li[1] == li[0] + li[2]
+        or li[2] == li[0] + li[1]
+        or true
+    ):
+        print("YES")
+    else:
+        print("NO")
+
     line = []
     count = 0
 
