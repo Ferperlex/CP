@@ -52,4 +52,10 @@ def invr():
 
 
 if __name__ == "__main__":
-    print()
+    for _ in range(inp()):
+        n = inp()
+        if n == 3:
+            print("NO")
+        else:
+            print("YES")
+            print(*([n % 2 - n // 2, n // 2] * n)[:n])
