@@ -54,31 +54,22 @@ def invr():
 if __name__ == "__main__":
     for _ in range(inp()):
 
-        n, k = inlt()
-        ht = inlt()
-        curr = 0
-        for _ in range(k):
-            curr = 0
+        l = list(map(int, input()[:-1]))
 
-            while curr < n - 1 and ht[curr] >= ht[curr + 1]:
-                curr += 1
+        m = l[-1]
 
-            if curr >= n - 1:
-                curr = -2
-                break
+        li = []
+        for n in reversed(l):
 
-            ht[curr] += 1
+            m = min(n, m)
 
-        # while count < k:
-        #     if curr >= n - 1:
-        #         curr = -2
-        #         break
+            if m < n:
+                li.append(min(9, n + 1))
+            else:
+                li.append(n)
 
-        #     if ht[curr] >= ht[curr + 1]:
-        #         curr += 1
-        #     else:
-        #         ht[curr] += 1
-        #         count += 1
-        #         curr -= 1
-        #     print(ht, count, curr)
-        print(curr + 1)
+        li.sort()
+
+        for n in li:
+            print(min(9, n), end="")
+        print()

@@ -54,31 +54,17 @@ def invr():
 if __name__ == "__main__":
     for _ in range(inp()):
 
-        n, k = inlt()
-        ht = inlt()
-        curr = 0
-        for _ in range(k):
-            curr = 0
+        w, h = inlt()
+        area = 0
+        for i in range(4):
 
-            while curr < n - 1 and ht[curr] >= ht[curr + 1]:
-                curr += 1
+            coords = inlt()
 
-            if curr >= n - 1:
-                curr = -2
-                break
+            # print((w, h), coords)
+            if i < 2:
+                area = max(area, (coords[-1] - coords[1]) * h)
 
-            ht[curr] += 1
+            else:
+                area = max(area, (coords[-1] - coords[1]) * w)
 
-        # while count < k:
-        #     if curr >= n - 1:
-        #         curr = -2
-        #         break
-
-        #     if ht[curr] >= ht[curr + 1]:
-        #         curr += 1
-        #     else:
-        #         ht[curr] += 1
-        #         count += 1
-        #         curr -= 1
-        #     print(ht, count, curr)
-        print(curr + 1)
+        print(area)

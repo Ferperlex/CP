@@ -16,6 +16,7 @@
 
 
 import sys
+import math
 
 input = sys.stdin.readline
 
@@ -52,33 +53,20 @@ def invr():
 
 
 if __name__ == "__main__":
+
     for _ in range(inp()):
 
-        n, k = inlt()
-        ht = inlt()
-        curr = 0
-        for _ in range(k):
-            curr = 0
+        my_h, my_d = inlt()
+        opp_h, opp_d = inlt()
+        coin, upg_d, upg_h = inlt()
 
-            while curr < n - 1 and ht[curr] >= ht[curr + 1]:
-                curr += 1
+        for i in range(coin + 1):
 
-            if curr >= n - 1:
-                curr = -2
+            new_h = my_h + (i * upg_h)
+            new_d = my_d + ((coin - i) * upg_d)
+
+            if math.ceil(opp_h / new_d) <= math.ceil(new_h / opp_d):
+                print("YES")
                 break
-
-            ht[curr] += 1
-
-        # while count < k:
-        #     if curr >= n - 1:
-        #         curr = -2
-        #         break
-
-        #     if ht[curr] >= ht[curr + 1]:
-        #         curr += 1
-        #     else:
-        #         ht[curr] += 1
-        #         count += 1
-        #         curr -= 1
-        #     print(ht, count, curr)
-        print(curr + 1)
+        else:
+            print("NO")

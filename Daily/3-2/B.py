@@ -54,31 +54,13 @@ def invr():
 if __name__ == "__main__":
     for _ in range(inp()):
 
-        n, k = inlt()
-        ht = inlt()
-        curr = 0
-        for _ in range(k):
-            curr = 0
+        a, b, c = inlt()
+        if (
+            (2 * b > c and (2 * b - c) % a == 0)
+            or (((c + a) / 2) % b == 0)
+            or (2 * b > a and (2 * b - a) % c == 0)
+        ):
+            print("YES")
 
-            while curr < n - 1 and ht[curr] >= ht[curr + 1]:
-                curr += 1
-
-            if curr >= n - 1:
-                curr = -2
-                break
-
-            ht[curr] += 1
-
-        # while count < k:
-        #     if curr >= n - 1:
-        #         curr = -2
-        #         break
-
-        #     if ht[curr] >= ht[curr + 1]:
-        #         curr += 1
-        #     else:
-        #         ht[curr] += 1
-        #         count += 1
-        #         curr -= 1
-        #     print(ht, count, curr)
-        print(curr + 1)
+        else:
+            print("NO")
